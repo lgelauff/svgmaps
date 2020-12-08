@@ -1,0 +1,66 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="3.898680000000013" height="4.5569999999999595" version="1.0" id="svg2" inkscape:version="0.91 r13725" sodipodi:docname="USA counties.svg">
+  <defs id="defs9439"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="798" inkscape:window-height="828" id="namedview9437" showgrid="false" showguides="true" inkscape:zoom="0.64950808" inkscape:cx="494.98999" inkscape:cy="313.535" inkscape:window-x="-7" inkscape:window-y="0" inkscape:window-maximized="0" inkscape:current-layer="svg2"/>
+  <metadata id="metadata4">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+        <cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:date>2019-10-06</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>U.S. Census Bureau, Abe.suleiman, Lokal_Profil</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>https://commons.wikimedia.org/wiki/File:Usa_counties_large.svg</dc:source>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <style id="style6">
+  /*
+   * Below are Cascading Style Sheet (CSS) definitions in use in this file,
+   * which allow easily changing how counties are displayed.
+   *
+   *
+   * For the U.S. Census county codes (FIPS codes) used in this file to identify individual counties, see this link:
+   * https://www2.census.gov/geo/docs/reference/codes/files/national_county.txt
+   *
+   * The county codes used in this file combine the 2-digit state code, which is in the second column of the file
+   * linked above, and the 3-digit county code, which is in the third column of the file linked above. Each value
+   * for the "id" attribute for each county is in the following form: "c[state_code][county-code]". For example,
+   * for Loving Country in Texas, the state code is "48" and the county code is "301", so the id name for the
+   * county is "c48301".
+   *
+   * County codes used in this file can also be found on Wikimedia Commons at this link:
+   * https://commons.wikimedia.org/wiki/File_talk:Usa_counties_large.svg/county_codes
+   *
+   * Examples:
+   *
+   * To color two counties red (in this case Loving County and Dallas County in Texas) simply
+   * go to the CSS insertion point and add:
+   *
+   * #c48301, #c48113 {fill:red}
+   *
+   * To color an entire state's counties (in the case New Mexico, with "35" being the state code) a green,
+   * go to the CSS insertion point and add:
+   *
+   * path[id*='c35'] {fill:#34A853}
+   *
+   */
+  #counties {fill:#d0d0d0;stroke:#000;stroke-width:.17829;} 
+  #borders {fill:none;stroke:#221e1f;stroke-width:.89143;} 
+  #separator {fill:none;stroke:#a9a9a9;stroke-width:2.3177309;}
+ </style>
+  <g id="counties" transform="translate(-856.35999,-255.851)" style="fill:#d0d0d0;stroke:#ffffff;stroke-width:0.17828999">
+    <path id="c11001" d="m 856.36,257.45 0.98236,-1.599 0.91461,0.474 2.0017,1.2025 -1.8252,2.8805 -0.12837,-1.141 -0.47246,-0.918 -0.80408,-0.353 -0.66857,-0.546" inkscape:connector-curvature="0" style="stroke:#ffffff">
+      <title id="title9433">Washington, DC</title>
+    </path>
+  </g>
+  </svg>
