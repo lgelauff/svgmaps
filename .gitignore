@@ -1,2 +1,7 @@
 .DS_Store
 .ipynb_checkpoints/states_mapcleaner-checkpoint.ipynb
+.ipynb_checkpoints/covid_mapmaker-checkpoint.ipynb
+data/time_series_covid19_confirmed_US.csv
+data/time_series_covid19_deaths_US.csv
+data/time_series_covid19_confirmed_US.csv
+data/time_series_covid19_deaths_US.csv
