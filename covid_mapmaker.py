@@ -77,7 +77,9 @@ def read_data(filename):
             elif state == "Missouri" and admin2 == "Kansas City":
                 fips = "29x01"
             else:
-                fips = str(int(float(row[fips_index]))).zfill(5)
+                fips_str = row[fips_index]
+                assert fips_str.endswith(".0")
+                fips = fips_str[:-2].zfill(5)
 
             covid_counts_by_state[state][fips] = int(row[-1])
             covid_last14_by_state[state][fips] = [int(day) for day in row[len(row)-14:len(row)]]
