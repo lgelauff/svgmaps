@@ -26,15 +26,12 @@ state_names = [states_df.loc[state_id]["STNAME"] for state_id in list(states_df.
 # Input: csv filepath, asof (list keeping track of the most recent dates)
 # Output: fipses (list of FIPS codes), covid counts (dict with key FIPS and value most recent count),
 #   covid_last14 (dict with key FIPS and value list of the last 14 covid-counts)
-#   full_df (pandas DF with FIPS and all rows for that state)
 
 asof_list = []
 def read_data(filename):
     fipses_by_state = {state: [] for state in state_names}
     covid_counts_by_state = {state: {} for state in state_names}
     covid_last14_by_state = {state: {} for state in state_names}
-    all_rows_by_state = {state: [] for state in state_names}
-    full_df_by_state = {}
 
     with open(filename, "r") as f:
         reader = csv.reader(f)
@@ -42,8 +39,6 @@ def read_data(filename):
         fips_index = header.index("FIPS")
         state_index = header.index("Province_State")
         admin2_index = header.index("Admin2")
-        iso2_index = header.index("iso2")
-        banned_states = ["Diamond Princess", "Grand Princess"]
 
         date = header[-1]
         asof_list.append(date)
@@ -87,17 +82,12 @@ def read_data(filename):
             covid_counts_by_state[state][fips] = int(row[-1])
             covid_last14_by_state[state][fips] = [int(day) for day in row[len(row)-14:len(row)]]
             fipses_by_state[state].append(fips)
-            all_rows_by_state[state].append([fips] + row)
 
             covid_counts_by_state["the United States"][fips] = int(row[-1])
             covid_last14_by_state["the United States"][fips] = [int(day) for day in row[len(row)-14:len(row)]]
             fipses_by_state["the United States"].append(fips)
-            all_rows_by_state["the United States"].append([fips] + row)
 
-        for state in state_names:
-            full_df_by_state[state] = pd.DataFrame(all_rows_by_state[state], columns=["cleanfips"] + header)
-
-    return fipses_by_state, covid_counts_by_state, covid_last14_by_state, full_df_by_state
+    return fipses_by_state, covid_counts_by_state, covid_last14_by_state
 
 
 # Read the population data for states
@@ -283,8 +273,8 @@ def writesvg(svg, filename):
     print("written: " + filename)
 
 
-fipses_by_state, covid_counts_by_state, covid_counts14_by_state, covid_counts_df_by_state = read_data(filename="data/time_series_covid19_confirmed_US.csv")
-fipses_deaths_by_state, covid_counts_deaths_by_state, covid_counts14_deaths_by_state, covid_deaths_df_by_state = read_data(filename="data/time_series_covid19_deaths_US.csv")
+fipses_by_state, covid_counts_by_state, covid_counts14_by_state = read_data(filename="data/time_series_covid19_confirmed_US.csv")
+fipses_deaths_by_state, covid_counts_deaths_by_state, covid_counts14_deaths_by_state = read_data(filename="data/time_series_covid19_deaths_US.csv")
 
 # Loop over the states and create their map.
 for st_name in state_names:
