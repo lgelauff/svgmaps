@@ -1,8 +1,15 @@
+# .DS_Store on macOS
 .DS_Store
+
+# Checkpoints
 .ipynb_checkpoints/states_mapcleaner-checkpoint.ipynb
 .ipynb_checkpoints/covid_mapmaker-checkpoint.ipynb
+
+# just a new version of the same csv each day. One example is enough.
 data/time_series_covid19_confirmed_US.csv
 data/time_series_covid19_deaths_US.csv
+
+#config files
 configEffeietsanders.py
 configEiabot.py
 login.py
